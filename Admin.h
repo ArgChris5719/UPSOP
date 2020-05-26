@@ -1,5 +1,5 @@
-#ifndef Admin_H_INCLUDED
-#define Admin_H_INCLUDED
+#ifndef ADMIN_H_INCLUDED
+#define ADMIN_H_INCLUDED
 #include<vector>
 
 using namesace std;
