@@ -25,12 +25,12 @@ public:
     int semester_rank;
 
     Student();
-    Student(User, int);
+    Student(User*, int);
     ~Student();
 
     void Create_Group();
     void Save_Group();
-    Student SearchStudents();
+    Student* SearchStudents();
     void EditGroupRole();
     void StudentsAccept();
     void StudentsDecline();
