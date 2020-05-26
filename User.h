@@ -34,3 +34,5 @@ public:
 	Conversation* search_conv(int);
 
 };
+
+#endif 
