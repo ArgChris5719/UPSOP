@@ -14,6 +14,10 @@ public:
     map<string, pair<string, double>> grades;
     Class& forClass;
 
+    GradeList();
+    GradeList(Professor, Class);
+    ~GradeList();
+
     double ask_grade();
     bool check_grade();
     void valid_message();

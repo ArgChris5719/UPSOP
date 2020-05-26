@@ -14,6 +14,10 @@ public:
     string classroom;
     vector<Lecture*> lectures;
 
+    Class();
+    Class(Professor, string, string, vector<Lecture*>);
+    ~Class();
+
     string AskForEditing();
     bool CheckClass();
     bool CheckECTS();
