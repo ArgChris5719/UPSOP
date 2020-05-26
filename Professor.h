@@ -1,5 +1,5 @@
 #ifndef Professor_H_INCLUDED
-#define STUDENT_H_INCLUDED
+#define Professor_H_INCLUDED
 #include<vector>
 
 using namesace std;
