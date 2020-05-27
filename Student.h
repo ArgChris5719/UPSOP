@@ -43,73 +43,23 @@ public:
     
     
     /* 
-    	Set-Get Methods
-						*/
+    	  Set-Get Methods
+		             */
 	
-    //		AM
-    void setAM(int a){
-    	AM = a;
-    }
-
-    int getAM(){
-    	return AM;
-    }
-
-    //		overall_score
-    void setOverallScore(int os){
-    	overall_score = os;
-    }
-
-    int getOverallScore(){
-    	return overall_score;
-    }
-
-    //		yearly_score
-    void setYearlyScore(int ys){
-    	yearly_score = ys;
-    }
-
-    int getYearlyScore(){
-    	return yearly_score;
-    }
-
-    //		semester_score
-    void setSemesterScore(int ss){
-    	semester_score = ss;
-    }
-
-    int getSemesterScore(){
-    	return semester_score;
-    }
-
-    //		overall_rank
-    void setOverallRank(int ovr){
-    	overall_rank = ovr;
-    } 
-
-    int getOverallRank(){
-    	return overall_rank;
-    }
-
-    //		yearly_rank
-    void setYearlyRank(int yr){
-    	yearly_rank = yr;
-    }
-
-    int getYearlyRank(){
-    	return yearly_rank;
-    }
-
-
-    //		semester_rank
-    void setSemesterRank(int sr){
-    	semester_rank = sr;
-    }
-
-    int getSemesterRank(){
-    	return semester_rank;
-    }
-
+    void setAM(int);
+    int getAM();
+    void setOverallScore(int);
+    int getOverallScore();
+    void setYearlyScore(int);
+    int getYearlyScore();
+    void setSemesterScore(int);
+    int getSemesterScore();
+    void setOverallRank(int);
+    int getOverallRank();
+    void setYearlyRank(int);
+    int getYearlyRank();
+    void setSemesterRank(int);
+    int getSemesterRank();
 
 };
 
