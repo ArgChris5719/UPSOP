@@ -9,6 +9,9 @@ class Class;
 
 class Admin{
 public:
+    Admin();
+    ~Admin();
+
     vector<Class*> Classes();
     void ChangeClass();
     void CreateLecture();

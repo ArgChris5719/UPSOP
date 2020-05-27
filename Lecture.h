@@ -7,14 +7,24 @@ using namespace std;
 class Class;
 
 class Lecture{
-public:
+private:
     Class& OfClass;
     int LecID;
 
+public:
    Lecture();
    Lecture(Class);
    ~Lecture();
 
+    //Get methods
+
+    Class& getOfClass();
+    int getLecID();
+
+    //Set methods
+
+    void setOfClass(Class);
+    void setLecID(int);
 
    void LectureErrorMsg();
    int ChooseLecture();

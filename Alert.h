@@ -10,10 +10,23 @@ class User;
 class Alert{
 private:
     vector<User*> user_list;
-    
-public:    
     string source;
     string alert_msg;
+public:    
+    Alert();
+    Alert(vector<User*>, string, string);
+    ~Alert();
+
+    //Get methods
+    vector<User*> getUser_list();
+    string getSource();
+    string getAlert_msg();
+
+    //Set methods
+
+    void setUser_list(vector<User*>);
+    void setSource(string);
+    void setAlert_msg();
 
     void ShowTimetable();
     void EditErrorMsg();

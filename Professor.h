@@ -17,6 +17,22 @@ private:
     vector<GradeList*> grades;
 
 public:
+    Professor();
+    Professor(vector<Room*>, vector<Class*>, vector<GradeList*>);
+    ~Professor();
+
+    //Get methods
+
+    vector<Room*> getIn_chargeOf();
+    vector<Class*> getClass_list();
+    vector<GradeList*> getGrades();
+
+    //Set methods
+
+    void setIn_chargeOf(Room);
+    void setClass_list(Class);
+    void setGrades(GradeList);
+
     void confirm_as_prof();
     GradeList& grade();
     void show_classes();

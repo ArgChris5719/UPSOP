@@ -8,15 +8,30 @@ class Professor;
 class Lecture;
 
 class Class{
-public:
+private:
     Professor& prof;
-    string timeslots[];
+    vector<string> timeslots;
     string classroom;
     vector<Lecture*> lectures;
 
+public:
     Class();
     Class(Professor, string, string, vector<Lecture*>);
     ~Class();
+
+    //Get methods
+
+    Professor& getProf();
+    vector<string> getTimeslots();
+    string getClassroom();
+    vector<Lecture*> lectures;
+
+    //Set Methods
+    
+    void setProf(Professor);
+    void setTimeslots(vector<string>);
+    void setClassroom(string);
+    void setLectures(Lecture);
 
     string AskForEditing();
     bool CheckClass();

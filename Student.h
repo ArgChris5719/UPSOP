@@ -1,20 +1,21 @@
 #ifndef STUDENT_H_INCLUDED
 #define STUDENT_H_INCLUDED
-#include<vector>
+#include <vector>
 
-using namesace std;
+using namespace std;
 
 class Alert;
 class Room;
 class Group;
 class Post;
+class Conversation; 
 
 class Student: public User{
 private:
     vector<Group*> belongs_in;
     vector<Room*> follows;
     vector<Post*> activity;
-public:
+
     int AM;
     int overall_score;
     int yearly_score;
@@ -23,6 +24,7 @@ public:
     int overall_rank;
     int yearly_rank;
     int semester_rank;
+public:
 
     Student();
     Student(User*, int);
