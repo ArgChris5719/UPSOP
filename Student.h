@@ -40,7 +40,26 @@ public:
     void EditAlerts();
     void SaveChanges();
     void editinfo();
-
+    
+    
+    /* 
+    	  Set-Get Methods
+		             */
+	
+    void setAM(int);
+    int getAM();
+    void setOverallScore(int);
+    int getOverallScore();
+    void setYearlyScore(int);
+    int getYearlyScore();
+    void setSemesterScore(int);
+    int getSemesterScore();
+    void setOverallRank(int);
+    int getOverallRank();
+    void setYearlyRank(int);
+    int getYearlyRank();
+    void setSemesterRank(int);
+    int getSemesterRank();
 
 };
 
