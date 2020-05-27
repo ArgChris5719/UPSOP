@@ -1,8 +1,8 @@
 #ifndef CLASS_H_INCLUDED
 #define CLASS_H_INCLUDED
-#include<vector>
+#include <vector>
 
-using namesace std;
+using namespace std;
 
 class Professor;
 class Lecture;

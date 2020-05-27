@@ -1,8 +1,8 @@
 #ifndef GRADELIST_H_INCLUDED
 #define GRADELIST_H_INCLUDED
-#include<vector>
+#include <vector>
 
-using namesace std;
+using namespace std;
 
 class Class;
 class Professor;

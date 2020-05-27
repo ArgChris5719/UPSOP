@@ -1,14 +1,17 @@
 #ifndef USER_H_INCLUDED
 #define USER_H_INCLUDED
-#include<vector>
+#include <vector>
+#include <iostream>
 
-using namesace std;
+using namespace std;
 
 class Alert;
 class Timetable;
 class Message;
 class ProfilePic;
 class Room;
+class Conversation;
+
 
 class User{
 

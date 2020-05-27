@@ -1,8 +1,8 @@
 #ifndef PROFESSOR_H_INCLUDED
 #define PROFESSOR_H_INCLUDED
-#include<vector>
+#include <vector>
 
-using namesace std;
+using namespace std;
 
 
 class Room;
