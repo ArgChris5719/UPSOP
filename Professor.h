@@ -8,6 +8,7 @@ using namespace std;
 class Room;
 class Class;
 class GradeList;
+class User;
 
 class Professor: public User{
 

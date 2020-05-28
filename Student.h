@@ -9,6 +9,8 @@ class Room;
 class Group;
 class Post;
 class Conversation; 
+class User;
+
 
 class Student: public User{
 private:
