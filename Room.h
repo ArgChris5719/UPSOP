@@ -41,7 +41,7 @@ public:
     void setConv_list(Conversation*);
 
     void create_post();
-    void delete_post(); // na to allaksoume sto sequence pou itan "delete()" kai sto class diagram
+    void delete_post();
     void create_alert();
     void create_conversation();
     void add_post();

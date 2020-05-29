@@ -13,34 +13,37 @@ class Conversation;
 class Post{
 private:
    int PostID;
-   User& author;
+   User* author;
    int upvotes;
-   Conversation& inConv;
+   string text;
+   Conversation* inConv;
    vector<string> keywords;
    Post* reply_to;
 
 public:
     Post();
-    Post(int, User, int, Conversation, vector<string>, Post*);
+    Post(int, User*, int, Conversation*, string, Post*);
     ~Post();
 
     //Get methods
 
     int getPostID();
-    User& getAuthor();
+    User* getAuthor();
     int getUpvotes();
-    Conversation& getInConv();
+    string getText();
+    Conversation* getInConv();
     vector<string> getKeywords();
     Post* getReply_to();
 
     //Set methods 
     
     void setPostID(int);
-    void setAuthor(User);
+    void setAuthor(User*);
     void setUpvotes(int);
-    void setInConv(Conversation);
-    void setKeywords(vector<string>);
-    void setReply_to(Post)*;
+    void setText(string);
+    void setInConv(Conversation*);
+    void setKeywords(string);
+    void setReply_to(Post*);
 
     void request_text();
     void check_text_size(string);
