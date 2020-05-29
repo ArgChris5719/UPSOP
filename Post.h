@@ -22,7 +22,7 @@ private:
 
 public:
     Post();
-    Post(int, User*, int, Conversation*, string, Post*);
+    Post(int, User*, int, Conversation*, string);
     ~Post();
 
     //Get methods
