@@ -17,10 +17,7 @@ using namespace std;
 
 
 class Alert;
-class Timetable {
-    private:
-    string todo="nothing";
-};
+class Timetable;
 class Message;
 class ProfilePic;
 class Room;
@@ -30,7 +27,7 @@ class User{
 
 private:
 	vector<Alert*> AlertsList;
-	Timetable Custom_TT;
+	Timetable* Custom_TT;
 	vector<Message*> msg_history;
 	int UserID;
 	string username;
@@ -45,7 +42,7 @@ public:
 	//Get methods
 
 	vector<Alert*> getAlertsList();
-	Timetable& getCustom_TT();
+	Timetable* getCustom_TT();
 	vector<Message*> getMsg_history();
 	int getUserID();
 	string getUsername();
@@ -54,13 +51,13 @@ public:
 
 	//Set methods
 
-	void setAlertsList(Alert);
-	void setCustom_TT(Timetable);
-	void setMsg_history(Message);
+	void setAlertsList(Alert*);
+	void setCustom_TT(Timetable*);
+	void setMsg_history(Message*);
 	void setUserID(int);
 	void setUsername(string);
 	void setEmail(string);
-	void setProfilePicList(ProfilePic);
+	void setProfilePicList(ProfilePic*);
 
 	void change_prof_pic();
 	string askImgSource();

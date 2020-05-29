@@ -6,31 +6,30 @@
 
 using namespace std;
 
-use Class;
-use User;
+class Class;
+class User;
 
 class Timetable{
-protected: 
-    vector<Class*> classes;
 private:
+    vector<Class*> classes;
     string name;
-    User& tt_owner;
+    User* tt_owner;
 public: 
     Timetable();
-    Timetable(vector<Class*>, string, User);
+    Timetable(Class*, string, User*);
     ~Timetable();
 
     //Get methods
 
     vector<Class*> getClasses();
     string getName();
-    User& getTT_owner();
+    User* getTT_owner();
 
     //Set methods
 
-    void setClasses(Class);
+    void setClasses(Class*);
     void setName(string);
-    void setTT_owner(User);
+    void setTT_owner(User*);
 
     void showTimetable();
     bool TimetablePreview(); //Asks user if it should proceed
