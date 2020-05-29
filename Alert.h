@@ -1,6 +1,7 @@
 #ifndef ALERT_H_INCLUDED
 #define ALERT_H_INCLUDED
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -9,24 +10,26 @@ class User;
 
 class Alert{
 private:
+    int AlertID;
     vector<User*> user_list;
     string source;
     string alert_msg;
 public:    
     Alert();
-    Alert(vector<User*>, string, string);
+    Alert(int, string, string);
     ~Alert();
 
     //Get methods
+    int getAlertID();
     vector<User*> getUser_list();
     string getSource();
     string getAlert_msg();
 
     //Set methods
-
-    void setUser_list(vector<User*>);
+    void setAlertID(int);
+    void setUser_list(User*);
     void setSource(string);
-    void setAlert_msg();
+    void setAlert_msg(string);
 
     void ShowTimetable();
     void EditErrorMsg();
