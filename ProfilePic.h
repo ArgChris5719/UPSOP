@@ -1,7 +1,6 @@
 #ifndef PROFILEPIC_H_INCLUDED
 #define PROFILEPIC_H_INCLUDED
 
-#include <vector>
 #include <iostream>
 
 
@@ -11,26 +10,26 @@ class User;
 
 class ProfilePic{
 private:
-    User& belongs_to;
+    User* belongs_to;
     string ImgSource;
     string type;
     double size;
 
 public: 
     ProfilePic();
-    ProfilePic(User, string, string);
+    ProfilePic(User*, string, string);
     ~ProfilePic();
 
     //Get methods
 
-    User& getBelongs_to();
+    User* getBelongs_to();
     string getImgSource();
     string getType();
     double getSize();
 
     //Set methods
 
-    void setBelongs_to(User);
+    void setBelongs_to(User*);
     void setImgSource(string);
     void setType(string);
     void setSize(double);
