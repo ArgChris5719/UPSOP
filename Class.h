@@ -1,6 +1,7 @@
 #ifndef CLASS_H_INCLUDED
 #define CLASS_H_INCLUDED
 #include <vector>
+#include <iostream> 
 
 using namespace std;
 
@@ -9,29 +10,29 @@ class Lecture;
 
 class Class{
 private:
-    Professor& prof;
+    Professor* prof;
     vector<string> timeslots;
     string classroom;
     vector<Lecture*> lectures;
 
 public:
     Class();
-    Class(Professor, string, string, vector<Lecture*>);
+    Class(Professor*, string, string, Lecture*);
     ~Class();
 
     //Get methods
 
-    Professor& getProf();
+    Professor* getProf();
     vector<string> getTimeslots();
     string getClassroom();
-    vector<Lecture*> lectures;
+    vector<Lecture*> getLectures();
 
     //Set Methods
     
-    void setProf(Professor);
-    void setTimeslots(vector<string>);
+    void setProf(Professor*);
+    void setTimeslots(string);
     void setClassroom(string);
-    void setLectures(Lecture);
+    void setLectures(Lecture*);
 
     string AskForEditing();
     bool CheckClass();

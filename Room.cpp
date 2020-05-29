@@ -5,6 +5,19 @@
 
 using namespace std;
 
+Room :: Room(){
+    cout << "New Room with no information" << endl;
+}
+
+Room :: Room(int i, string s, Professor* p){
+    setRoomID(i);
+    setTitle(s);
+    setRoom_owner(p);
+    cout << "New room with ID = " << RoomID << endl;
+    cout << "Titled: \"" << title << "\"" << endl;
+    cout << "Owner: " << room_owner->getUsername();
+}
+
 int Room :: getRoomID(){
     return RoomID;
 }

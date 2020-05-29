@@ -10,7 +10,7 @@ using namespace std;
 class Professor;
 class Student;
 class Conversation;
-class Users;
+class User;
 
 class Room {
 private:
@@ -21,7 +21,7 @@ private:
     vector<Conversation*> conv_list;
 public: 
     Room();
-    Room(int, string, Professor);
+    Room(int, string, Professor*);
     ~Room();
 
     //Get methods
