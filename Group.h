@@ -1,6 +1,7 @@
 #ifndef GROUP_H_INCLUDED
 #define GROUP_H_INCLUDED
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ private:
 
 public:
     Group();
-    Group(string, vector<Student*>);
+    Group(string, Student*);
     ~Group();
 
     //Get methods
@@ -29,9 +30,9 @@ public:
     //Set methods
 
     void setName(string);
-    void setMembers(Student);
-    void setMsg_history(Message);
-    void setPinned_msgs(Message);
+    void setMembers(Student*);
+    void setMsg_history(Message*);
+    void setPinned_msgs(Message*);
 
 };
 
