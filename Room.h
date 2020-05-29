@@ -10,13 +10,14 @@ using namespace std;
 class Professor;
 class Student;
 class Conversation;
+class Users;
 
-class Room{
+class Room {
 private:
     int RoomID;
     string title;
-    Professor& room_owner;
-    Student& assigned_mod;
+    Professor* room_owner;
+    Student* assigned_mod;
     vector<Conversation*> conv_list;
 public: 
     Room();
@@ -27,20 +28,20 @@ public:
 
     int getRoomID();
     string getTitle();
-    Professor& getRoom_owner();
-    Student& getAssigned_mod();
+    Professor* getRoom_owner();
+    Student* getAssigned_mod();
     vector<Conversation*> getConv_list();
 
     //Set methods
 
     void setRoomID(int);
     void setTitle(string);
-    void setRoom_owner(Professor);
-    void setAssigned_mod(Student);
-    void setConv_list(Conversation);
+    void setRoom_owner(Professor*);
+    void setAssigned_mod(Student*);
+    void setConv_list(Conversation*);
 
     void create_post();
-    void delete();
+    void delete_post(); // na to allaksoume sto sequence pou itan "delete()" kai sto class diagram
     void create_alert();
     void create_conversation();
     void add_post();

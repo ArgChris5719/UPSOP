@@ -9,11 +9,11 @@ int Room :: getRoomID(){
     return RoomID;
 }
 
-string Room :: getRoom_owner(){
+Professor* Room :: getRoom_owner(){
     return room_owner;
 }
 
-string Room :: getAssigned_mod(){
+Student* Room :: getAssigned_mod(){
     return assigned_mod;
 }
 
@@ -30,11 +30,11 @@ void Room :: setTitle(string s){
 }
 
 void Room :: setRoom_owner(Professor* p){
-    room_owner = p->getUsername();
+    room_owner = p;
 }
 
 void Room :: setAssigned_mod(Student* s){
-    assigned_mod = s->getUsername();
+    assigned_mod = s;
 }
 
 void Room :: setConv_list(Conversation* c){
