@@ -10,7 +10,12 @@ Class :: Class(){
 }
 
 Class :: Class(Professor* p, string a, string b, Lecture* l){
-
+    setProf(p);
+    setTimeslots(a);
+    setClassroom(b);
+    setLectures(l);
+    cout << "New Class by " << getProf() << endl;
+    cout << "In Classroom: \"" << getClassroom() << "\"" << endl;
 }
 
 Professor* Class :: getProf(){

@@ -13,9 +13,9 @@ Room :: Room(int i, string s, Professor* p){
     setRoomID(i);
     setTitle(s);
     setRoom_owner(p);
-    cout << "New room with ID = " << RoomID << endl;
-    cout << "Titled: \"" << title << "\"" << endl;
-    cout << "Owner: " << room_owner->getUsername();
+    cout << "New room with ID = " << getRoomID() << endl;
+    cout << "Titled: \"" << getTitle() << "\"" << endl;
+    cout << "Owner: " << getRoom_owner()->getUsername();
 }
 
 int Room :: getRoomID(){
