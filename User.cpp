@@ -1,10 +1,10 @@
 #include "User.h"
 #include <iostream>
-#include <vector>
+//#include <vector>
 
 using namespace std;
 
-
+extern vector<User> user_db;
 /* * * * * * * * * * * * * * * * * * * * * *
 *				 						   *
 *				 						   *
@@ -17,19 +17,28 @@ using namespace std;
 
 inline User::User(){
     username="John Smith";
-    email="unknown";
-    cout << "I should not be here...\n";
+    email="Matrix";
+    cout << "A new user is born !\n" << username << " at " << email << endl;
+    user_db.push_back(*this);
+    UserID = user_db.size();
+    cout << "ID: " << UserID << endl;
 }
 
 inline User::User(string un, string mail){
     username=un;
     email=mail;
-    cout << "A new user is born !\nThy name is " << username << " and thou shalt find him or her at " << email << endl;
+    cout << "A new user is born !\n" << username << " at " << email << endl;
+    user_db.push_back(*this);
+    UserID = user_db.size();
+    cout << "ID: " << UserID << endl;
+
 }
 
-inline User::~User(){
-    cout << "User " << username << " deleted!\n";
-}
+//inline User::~User(){
+    //cout << username << " deleted!\n";
+    //user_db.erase(user_db.begin()+UserID-1);
+
+//}
 
 
 

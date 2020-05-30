@@ -42,6 +42,12 @@ void Room :: setTitle(string s){
     title = s;
 }
 
+
+//new
+
+string Room::getTitle(){
+    return title;
+}
 void Room :: setRoom_owner(Professor* p){
     room_owner = p;
 }
