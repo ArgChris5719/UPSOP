@@ -12,6 +12,7 @@ class ProfilePic{
 private:
     User* belongs_to;
     string ImgSource;
+    string path;
     string type;
     double size;
 
@@ -24,6 +25,7 @@ public:
 
     User* getBelongs_to();
     string getImgSource();
+    string getPath();
     string getType();
     double getSize();
 
@@ -31,14 +33,15 @@ public:
 
     void setBelongs_to(User*);
     void setImgSource(string);
+    void setPath(string);
     void setType(string);
     void setSize(double);
 
-    string checkImgSource(string);
-    bool checkFileType(string);
+    void checkImgSource();
+    void checkFileType();
     bool checkFileSize(string);
     void askForEditing();
-    string ImgPreview();
+    void ImgPreview();
     void addToProfilePicList();
     string FileTypeErrorMsg(); //Waits for user to input his file path again
     string FileSizeErrorMsg(); 
