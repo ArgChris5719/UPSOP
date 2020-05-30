@@ -8,17 +8,13 @@ using namespace std;
 class Class;
 
 class Admin{
-private: 
-    vector<Class*> class_list;
 public:
     Admin();
     ~Admin();
 
-    vector<Class*> getClasses();
-    void setClasses(Class*);
-
+    vector<Class*> Classes();
     void ChangeClass();
-    void CreateLecture(Class* c);
+    void CreateLecture();
 
 };
 
