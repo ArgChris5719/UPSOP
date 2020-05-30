@@ -4,9 +4,9 @@
 #include "User.cpp"
 
 
-vector<User> user_db;
-using namespace std;
 
+using namespace std;
+vector<User> user_db;
 int main()
 {
     Student st1("avoritis", "avoritis@ceid.upatras.gr");
