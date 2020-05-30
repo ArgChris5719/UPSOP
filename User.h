@@ -1,5 +1,5 @@
-#ifndef USERS_H_INCLUDED
-#define USERS_H_INCLUDED
+#ifndef USER_H_INCLUDED
+#define USER_H_INCLUDED
 #include <vector>
 #include <iostream>
 
@@ -17,47 +17,55 @@ using namespace std;
 
 
 class Alert;
-class Timetable;
+class Timetable {
+    private:
+    string todo="nothing";
+};
 class Message;
 class ProfilePic;
 class Room;
 class Conversation;
 
 class User{
-
+protected:
+    string username;
 private:
 	vector<Alert*> AlertsList;
-	Timetable* Custom_TT;
+	Timetable Custom_TT;
 	vector<Message*> msg_history;
 	int UserID;
-	string username;
+	//string username;
 	string email;
 	vector<ProfilePic*> ProfPicList;
 public:
 
 	User();
 	User(string, string);
-	~User();
+	virtual ~User(){
+        //cout << "Student " << username << " TERMINATED!\n";
+	};
 
 	//Get methods
 
 	vector<Alert*> getAlertsList();
-	Timetable* getCustom_TT();
+	Timetable& getCustom_TT();
 	vector<Message*> getMsg_history();
 	int getUserID();
-	string getUsername();
+	string getUsername(){
+        return username;
+	};
 	string getEmail();
 	vector<ProfilePic*> getProfilePicList();
 
 	//Set methods
 
-	void setAlertsList(Alert*);
-	void setCustom_TT(Timetable*);
-	void setMsg_history(Message*);
+	void setAlertsList(Alert);
+	void setCustom_TT(Timetable);
+	void setMsg_history(Message);
 	void setUserID(int);
 	void setUsername(string);
 	void setEmail(string);
-	void setProfilePicList(ProfilePic*);
+	void setProfilePicList(ProfilePic);
 
 	void change_prof_pic();
 	string askImgSource();
@@ -89,28 +97,46 @@ class Group;
 class Student: public User{
 private:
     vector<Group*> belongs_in;
+
     vector<Room*> follows;
     vector<Post*> activity;
 
     int AM;
-    int overall_score;
-    int yearly_score;
-    int semester_score;
+    int overall_score=0;
+    int yearly_score=0;
+    int semester_score=0;
 
-    int overall_rank;
-    int yearly_rank;
-    int semester_rank;
+    int overall_rank=0;
+    int yearly_rank=0;
+    int semester_rank=0;
 public:
 
     Student(){
-        cout << "A new student!\n";
+        cout << "Student!\n";
+        cout << "Activity: " << activity.size() << "\n\n" ;
     };
+
     Student(User, int){
-        cout << "A new special student!\n";
+        //
     };
+
+    Student(string un,string mail):User(un,mail){
+        cout << "Specific Student!\n";
+        cout << "Activity: " << activity.size() << "\n\n" ; // just to chack
+    };
+
+        Student(string un,string mail, int am):User(un,mail){
+        cout << "Specific Student!\n";
+        AM=am;
+        cout << "AM: " << am << endl;
+        cout << "Activity: " << activity.size() << "\n\n" ; // just to chack
+    };
+
     ~Student(){
-        cout << "The end !\n";
+        cout << "Student " << username << " TERMINATED\n";
     };
+
+
 
     void Create_Group();
     void Save_Group();
@@ -170,9 +196,16 @@ private:
     vector<GradeList*> grades;
 
 public:
-    Professor();
+    Professor(){
+        cout << "A new generic professor has arrived...\n\n";
+    };
+    Professor(string un, string mail): User(un,mail) {
+        cout << "A new SPECIAL PROFESSOR has arrived!\n\n";
+    }
     Professor(vector<Room*>, vector<Class*>, vector<GradeList*>);
-    ~Professor();
+    ~Professor(){
+        cout << "Professor " << username << " TERMINATED\n";
+    };
 
     //Get methods
 
@@ -192,7 +225,6 @@ public:
     void choose_class();
 
 };
-
 
 
 
