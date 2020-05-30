@@ -37,7 +37,7 @@ public:
     void setForClass(Class*);
 
     double ask_grade();
-    bool check_grade();
+    bool check_grade(double);
     void valid_message();
     double invalid_message();
     int searchDB();

@@ -31,11 +31,11 @@ public:
     void setSource(string);
     void setAlert_msg(string);
 
-    void ShowTimetable();
-    void EditErrorMsg();
-    void ValidationErrorMsg();
-    void SaveChanges();
-    void ChangesErrorMsg();
+    void ShowTimetable(); //User -> AlertList -> User.getCustom_TT()
+    void EditErrorMsg(); //Admin -> Alert.setAlert_msg()
+    void ValidationErrorMsg(); // wait for input
+    void SaveChanges(); 
+    void ChangesErrorMsg(); // Admin -> Alert.setSource()
 };
 
 
