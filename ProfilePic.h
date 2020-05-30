@@ -43,7 +43,7 @@ public:
     void askForEditing();
     void ImgPreview();
     void addToProfilePicList();
-    string FileTypeErrorMsg(); //Waits for user to input his file path again
+    void FileTypeErrorMsg();
     string FileSizeErrorMsg(); 
 
 };

@@ -99,7 +99,7 @@ void ProfilePic :: checkFileType(){
     setType(s);
 }
 
-string ProfilePic :: FileTypeErrorMsg(){
+void ProfilePic :: FileTypeErrorMsg(){
     cout << "Invalid Filetype" << endl;
     cout << "Object is being deleted" << endl;
     delete this;
