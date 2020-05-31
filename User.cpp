@@ -1,4 +1,5 @@
 #include "User.h"
+//#include "Timetable.h"
 #include <iostream>
 //#include <vector>
 
@@ -24,9 +25,10 @@ inline User::User(){
     cout << "ID: " << UserID << endl;
 }
 
-inline User::User(string un, string mail){
+inline User::User(string un, string mail,string pass){
     username=un;
     email=mail;
+    password=pass;
     cout << "A new user is born !\n" << username << " at " << email << endl;
     user_db.push_back(*this);
     UserID = user_db.size();

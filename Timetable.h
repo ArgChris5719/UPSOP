@@ -1,34 +1,35 @@
 #ifndef TIMETABLE_H_INCLUDED
 #define TIMETABLE_H_INCLUDED
+#include "Class.h"
 #include <vector>
 #include <iostream>
 
 
 using namespace std;
 
-use Class;
-use User;
+class Class;
+class User;
 
 class Timetable{
-protected: 
+protected:
     vector<Class*> classes;
 private:
     string name;
-    User& tt_owner;
-public: 
+    User * tt_owner;
+public:
     Timetable();
-    Timetable(vector<Class*>, string, User);
+    Timetable(Class*, string, User);
     ~Timetable();
 
     //Get methods
 
     vector<Class*> getClasses();
     string getName();
-    User& getTT_owner();
+    User * getTT_owner();
 
     //Set methods
 
-    void setClasses(Class);
+    void setClasses(Class*);
     void setName(string);
     void setTT_owner(User);
 

@@ -4,7 +4,6 @@
 #include <string>
 
 using namespace std;
-
 ProfilePic :: ProfilePic(){
     cout << "New ProfilePic with no information" << endl;
 }
@@ -14,12 +13,16 @@ ProfilePic :: ProfilePic(User* u, string s, string p){
     setImgSource(s);
     checkImgSource();
     setPath(p);
-    checkFileType();    
+    checkFileType();
     cout << "ProfilePic for User: " << getBelongs_to()->getUsername() << endl;
     cout << "ImgSource: " << getImgSource() << endl;
     cout << "ImgType: " << getType() << endl;
     cout << "ImgPath: " << getPath() << endl;
 
+}
+
+ProfilePic::~ProfilePic(){
+    cout << "Profile Picture deleted.\n";
 }
 
 
@@ -59,6 +62,10 @@ void ProfilePic :: setPath(string s){
 
 void ProfilePic :: setSize(double d){
     size = d;
+}
+
+void ProfilePic :: setType(string p_type){
+    type = p_type;
 }
 
 void ProfilePic :: checkImgSource(){

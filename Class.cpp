@@ -1,5 +1,5 @@
 #include "Class.h"
-
+#include "User.h"
 #include <iostream>
 #include <vector>
 
@@ -18,12 +18,16 @@ Class :: Class(Professor* p, string a, string b, Lecture* l){
     cout << "In Classroom: \"" << getClassroom() << "\"" << endl;
 }
 
+Class::~Class(){
+    cout << "Class Deleted.\n";
+}
+
 Professor* Class :: getProf(){
     return prof;
 }
 
-string Class :: getName(){
-    return name;
+string Class::getName(){
+    return class_name;
 }
 
 vector<string> Class :: getTimeslots(){
@@ -42,10 +46,6 @@ void Class :: setProf(Professor* p){
     prof = p;
 }
 
-void Class :: setName(string s){
-    name = s;
-}
-
 void Class :: setTimeslots(string s){
     timeslots.push_back(s);
 }
@@ -56,4 +56,44 @@ void Class :: setClassroom(string s){
 
 void Class :: setLectures(Lecture* l){
     lectures.push_back(l);
+}
+
+void Class::setName(string c_name){
+    class_name=c_name;
+}
+
+
+void Class :: AskForEditing(){
+    cout << "Press '1' to edit Class name." << endl;
+    cout << "Press '2' to edit timeslots." <<endl;
+    cout << "Press '3' to delete Class. " << endl;
+    cout << "Press '4' to go back. " << endl;
+    int i;
+    cin >> i;
+    string s;
+    switch(i){
+        case 1:
+            cout << "Enter new Class name: ";
+            cin >> s;
+            setName(s);
+            break;
+        case 2:
+            timeslots.clear();
+            cout << "Enter new time slot: ";
+            cin >> s;
+            setTimeslots(s);
+            break;
+        case 3:
+            delete this;
+            break;
+        case 4:
+            break;
+        default:
+            EditingErrorMsg();
+    }
+
+}
+
+void Class :: EditingErrorMsg(){
+    cout << "Something went wrong with the editing process!" << endl;
 }

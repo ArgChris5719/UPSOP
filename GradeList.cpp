@@ -1,6 +1,6 @@
 #include "GradeList.h"
 #include "User.h"
-#include "Class.h" 
+#include "Class.h"
 
 #include <vector>
 #include <iostream>
@@ -24,7 +24,7 @@ Professor* GradeList :: getGraded_by(){
     return graded_by;
 }
 
-Map GradeList :: getGrades(){
+map<string, pair<string, double> > GradeList :: getGrades(){
     return grades;
 }
 
@@ -37,7 +37,8 @@ void GradeList :: setGraded_by(Professor* p){
 }
 
 void GradeList :: setGrades(string s, double d){
-    grades.insert({s, d});
+    string AM="5164";
+  //  grades.insert(<string> am,pair<string,double>(s, d));
 }
 
 void GradeList :: setForClass(Class* c){
@@ -87,17 +88,18 @@ double GradeList :: invalid_message(){
 }
 
 int GradeList :: searchDB(){
+    /*
     string AM;
     cout << "Enter the AM of the student you wish to find: ";
     cin >> AM;
-    Map::iterator it;
+    map<string, double>::iterator it;
     it = getGrades().find(AM);
     if (it == getGrades().end()){
         cout << "Student not found in list" << endl;
     }
     else{
-        cout << "The student with AM = " << it->first << "was graded: " << it->second << endl;
-    }
+        cout << "The student with AM = " << endl; // it.first << "was graded: " << it->second.second  << endl;
+    } */
 }
 
 bool GradeList :: askForConfirmation(){
