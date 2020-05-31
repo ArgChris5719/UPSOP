@@ -1,5 +1,6 @@
 #ifndef USER_H_INCLUDED
 #define USER_H_INCLUDED
+//#include "Timetable.h"
 #include <vector>
 #include <iostream>
 
@@ -17,10 +18,7 @@ using namespace std;
 
 
 class Alert;
-class Timetable {
-    private:
-    string todo="nothing";
-};
+class Timetable;
 class Message;
 class ProfilePic;
 class Room;
@@ -31,16 +29,16 @@ protected:
     string username;
 private:
 	vector<Alert*> AlertsList;
-	Timetable Custom_TT;
+	Timetable * Custom_TT;
 	vector<Message*> msg_history;
 	int UserID;
 	//string username;
-	string email;
+	string email,password;
 	vector<ProfilePic*> ProfPicList;
 public:
 
 	User();
-	User(string, string);
+	User(string, string,string);
 	virtual ~User(){
         //cout << "Student " << username << " TERMINATED!\n";
 	};
@@ -119,13 +117,13 @@ public:
     Student(User, int){
         //
     };
-
-    Student(string un,string mail):User(un,mail){
+/*
+    Student(string un,string mail,string pass):User(un,mail,pass){
         cout << "Specific Student!\n";
         cout << "Activity: " << activity.size() << "\n\n" ; // just to chack
     };
-
-        Student(string un,string mail, int am):User(un,mail){
+*/
+        Student(string un,string mail, int am,string pass):User(un,mail,pass){
         cout << "Specific Student!\n";
         AM=am;
         cout << "AM: " << am << endl;
@@ -199,7 +197,7 @@ public:
     Professor(){
         cout << "A new generic professor has arrived...\n\n";
     };
-    Professor(string un, string mail): User(un,mail) {
+    Professor(string un, string mail,string pass): User(un,mail,pass) {
         cout << "A new SPECIAL PROFESSOR has arrived!\n\n";
     }
     Professor(vector<Room*>, vector<Class*>, vector<GradeList*>);

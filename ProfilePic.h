@@ -11,38 +11,41 @@ class User;
 
 class ProfilePic{
 private:
-    User& belongs_to;
+    User * belongs_to;
     string ImgSource;
     string type;
+    string path;
     double size;
 
-public: 
+public:
     ProfilePic();
-    ProfilePic(User, string, string);
+    ProfilePic(User*, string, string);
     ~ProfilePic();
 
     //Get methods
 
-    User& getBelongs_to();
+    User * getBelongs_to();
     string getImgSource();
     string getType();
     double getSize();
+    string getPath();
 
     //Set methods
 
-    void setBelongs_to(User);
+    void setBelongs_to(User*);
     void setImgSource(string);
     void setType(string);
     void setSize(double);
 
-    string checkImgSource(string);
-    bool checkFileType(string);
+    void checkImgSource();
+    void checkFileType();
     bool checkFileSize(string);
     void askForEditing();
-    string ImgPreview();
+    void ImgPreview();
     void addToProfilePicList();
-    string FileTypeErrorMsg(); //Waits for user to input his file path again
-    string FileSizeErrorMsg(); 
+    void FileTypeErrorMsg(); //Waits for user to input his file path again
+    string FileSizeErrorMsg();
+    void setPath(string);
 
 };
 

@@ -5,12 +5,12 @@
 #include <iostream>
 
 using namespace std;
-
+//class User;
 Timetable :: Timetable(){
     cout << "New Timetable with no information" << endl;
 }
 
-Timetable :: Timetable(Class* c, string s, User* u){
+Timetable :: Timetable(Class* c, string s, User u){
     setClasses(c);
     setName(s);
     setTT_owner(u);
@@ -39,6 +39,6 @@ void Timetable :: setName(string s){
     name =s;
 }
 
-void Timetable :: setTT_owner(User* u){
-    tt_owner = u;
+void Timetable :: setTT_owner(User u){
+    *tt_owner = u;
 }

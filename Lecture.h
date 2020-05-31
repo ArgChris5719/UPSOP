@@ -8,22 +8,22 @@ class Class;
 
 class Lecture{
 private:
-    Class& OfClass;
+    Class * OfClass;
     int LecID;
 
 public:
    Lecture();
-   Lecture(Class);
+   Lecture(Class*);
    ~Lecture();
 
     //Get methods
 
-    Class& getOfClass();
+    Class * getOfClass();
     int getLecID();
 
     //Set methods
 
-    void setOfClass(Class);
+    void setOfClass(Class*);
     void setLecID(int);
 
    void LectureErrorMsg();
