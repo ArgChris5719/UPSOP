@@ -37,10 +37,10 @@ public:
     void setClassroom(string);
     void setLectures(Lecture*);
 
-    void AskForEditing();
+    string AskForEditing();
     bool CheckClass();
     bool CheckECTS();
-    void EditingErrorMsg();
+    string EditingErrorMsg();
 };
 
 #endif
