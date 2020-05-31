@@ -22,6 +22,10 @@ Professor* Class :: getProf(){
     return prof;
 }
 
+string Class :: getName(){
+    return name;
+}
+
 vector<string> Class :: getTimeslots(){
     return timeslots;
 }
@@ -36,6 +40,10 @@ vector<Lecture*> Class :: getLectures(){
 
 void Class :: setProf(Professor* p){
     prof = p;
+}
+
+void Class :: setName(string s){
+    name = s;
 }
 
 void Class :: setTimeslots(string s){

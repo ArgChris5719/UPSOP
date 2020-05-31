@@ -10,6 +10,7 @@ class Lecture;
 
 class Class{
 private:
+    string name; 
     Professor* prof;
     vector<string> timeslots;
     string classroom;
@@ -22,6 +23,7 @@ public:
 
     //Get methods
 
+    string getName();
     Professor* getProf();
     vector<string> getTimeslots();
     string getClassroom();
@@ -29,6 +31,7 @@ public:
 
     //Set Methods
     
+    void setName(string);
     void setProf(Professor*);
     void setTimeslots(string);
     void setClassroom(string);
