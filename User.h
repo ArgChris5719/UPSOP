@@ -35,6 +35,7 @@ private:
 	//string username;
 	string email,password;
 	vector<ProfilePic*> ProfPicList;
+	bool logged;
 public:
 
 	User();
@@ -52,6 +53,12 @@ public:
 	string getUsername(){
         return username;
 	};
+	string getPassword(){
+        return password;
+	};
+	bool isLoggedIn(){
+        return logged;
+	}
 	string getEmail();
 	vector<ProfilePic*> getProfilePicList();
 
@@ -70,6 +77,10 @@ public:
 	void createProfilePic(string);
 	void post(Room*);
 	Conversation* search_conv(int);
+	void setLoggedIn(bool log){
+        logged = log;
+	}
+
 
 };
 
